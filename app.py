@@ -1,6 +1,6 @@
-from transformers import pipeline
-import os
 from slack_bolt import App
+import os
+from transformers import pipeline
 
 app = App(
     token=os.environ.get("SLACK_BOT_TOKEN"),
@@ -12,34 +12,42 @@ pipe = pipeline('text-classification',
 
 
 """
-# License
+License
 
-This code snippet, written by Daniel Korth from TUM, is licensed under the MIT License.
+This code snippet, written by Daniel Korth from TUM, is licensed
+under the MIT License.
 
 MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this code
-snippet and associated documentation files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
-the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this code snippet and associated
+documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
 
-1. The above license notice and this permission notice shall be included in all copies or
-   substantial portions of the Software.
+The above license notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-2. The Software is provided "as is", without warranty of any kind, express or implied,
-   including but not limited to the warranties of merchantability, fitness for a particular
-   purpose and noninfringement. In no event shall the authors or copyright holders be liable
-   for any claim, damages or other liability, whether in an action of contract, tort or
-   otherwise, arising from, out of or in connection with the Software or the use or other
-   dealings in the Software.
+The Software is provided "as is", without warranty of any kind,
+express or implied, including but not limited to the warranties
+of merchantability, fitness for a particular purpose and
+noninfringement. In no event shall the authors or copyright
+holders be liable for any claim, damages or other liability,
+whether in an action of contract, tort or otherwise, arising
+from, out of or in connection with the Software or the use or
+other dealings in the Software.
 
-3. Any person wishing to distribute modifications to the Software is encouraged to send the
-   modifications to the original author, Daniel Korth (contact information available at
-   [TUM.ai](https://www.tum.ai)), so that they can be incorporated into future versions of
-   the Software.
+Any person wishing to distribute modifications to the Software
+is encouraged to send the modifications to the original author,
+Daniel Korth (contact information available at),
+so that they can be incorporated into future versions of
+the Software.
 
-By using this code snippet, you agree to comply with the terms and conditions of this license.
+By using this code snippet, you agree to comply with the terms
+and conditions of this license.
 """
 
 
