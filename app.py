@@ -1,6 +1,10 @@
-from slack_bolt import App
 import os
+from dotenv import load_dotenv
+from slack_bolt import App
 from transformers import pipeline
+
+load_dotenv()
+print("Hello")
 
 app = App(
     token=os.environ.get("SLACK_BOT_TOKEN"),
