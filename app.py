@@ -4,7 +4,6 @@ from slack_bolt import App
 from transformers import pipeline
 
 load_dotenv()
-print("Hello")
 
 app = App(
     token=os.environ.get("SLACK_BOT_TOKEN"),
@@ -67,16 +66,17 @@ def process(input_text):
 @app.event("message")
 def handle_message(event, say):
     text = event["text"]
-    say(f"You said: {text}")
-
     channel = event["channel"]
     timestamp = event["ts"]
     sentiment = process(text)
 
+    emoji = ""
     if sentiment < 0:
-        emoji = "rocket-down"
+        emoji = "not-so-rocket"
     elif sentiment > 0:
         emoji = "rocket"
+    else:
+        emoji = "rocket-forward"
 
     try:
         app.client.reactions_add(

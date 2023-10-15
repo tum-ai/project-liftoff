@@ -10,4 +10,5 @@ dependencies:
   - pip:
     - slack_bolt
     - python-dotenv
+    - emoji
 
